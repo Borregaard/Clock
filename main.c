@@ -16,25 +16,25 @@ int main() {
 }
 
 void clock_v2() {
-    time_t rawtime;
-    struct tm* timeinfo;
+    time_t rawTime;
+    struct tm* timeInfo;
 
     // Used to store the time
     // returned by localetime() function
     char buffer[80];
 
-    time(&rawtime);
-    timeinfo = localtime(&rawtime);
+    time(&rawTime);
+    timeInfo = localtime(&rawTime);
     strftime(buffer, 80,
              "Time is %H:%M:%S",
-             timeinfo);
+             timeInfo);
 
     // strftime() function stores the
     // current time as Hours : Minutes
-    //%I %M and %p-> format specifier
+    // %H %M and %S -> format specifier
     // of Hours minutes and am/pm respectively*/
 
     // prints the formatted time
     puts(buffer);
-
 }
+
