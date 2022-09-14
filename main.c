@@ -6,7 +6,8 @@ void clock_v2();
 
 int main() {
 
-    for (int i = 0; i < 60; ++i) {
+    // Runs for a day
+    for (int i = 0; i < 60*60*24; ++i) {
         clock_v2();
         Sleep(1000);
     }
